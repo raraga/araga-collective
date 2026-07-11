@@ -2,12 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use Inertia\Inertia;
 use App\Models\Project;
+use Inertia\Inertia;
+use Inertia\Response;
 
 class PortfolioController extends Controller
 {
-    public function index()
+    public function index(): Response
     {
         $projects = Project::with('tags')->orderBy('sort_order')->get();
 

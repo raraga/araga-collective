@@ -9,9 +9,9 @@ test('the portfolio page loads successfully', function () {
     $response->assertOk();
 });
 
-test('the portfolio page renders the welcome inertia component', function () {
+test('the portfolio page renders the home inertia component', function () {
     $response = $this->get(route('home'));
-    $response->assertInertia(fn (Assert $page) => $page->component('welcome'));
+    $response->assertInertia(fn (Assert $page) => $page->component('home'));
 });
 
 test('the portfolio page displays projects', function () {
