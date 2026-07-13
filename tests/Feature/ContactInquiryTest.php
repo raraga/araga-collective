@@ -1,7 +1,6 @@
 <?php
 
 use App\Mail\ContactInquiryMail;
-use App\Models\ContactInquiry;
 use Illuminate\Support\Facades\Mail;
 
 test('the contact form can be submitted with valid data', function () {
