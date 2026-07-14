@@ -21,6 +21,8 @@ class ProjectFactory extends Factory
             'description' => fake()->paragraph(),
             'thumbnail_path' => fake()->imageUrl(800, 600, 'business'),
             'url' => fake()->optional(0.7)->url(),
+            'pictures' => array_map(fn () => fake()->imageUrl(1200, 800, 'business'), range(1, fake()->numberBetween(1, 5))),
+            'selected' => fake()->boolean(),
             'sort_order' => fake()->numberBetween(0, 100),
         ];
     }

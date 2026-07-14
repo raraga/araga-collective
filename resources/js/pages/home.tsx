@@ -34,7 +34,7 @@ export default function Home({ projects }: WelcomeProps) {
                     <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
                         <span className="text-lg font-bold tracking-tight">Araga Collective</span>
                         <div className="flex items-center gap-8">
-                            <a href="#projects" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
+                            <a href="/projects" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
                                 Projects
                             </a>
                             <a href="#contact" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
@@ -45,16 +45,13 @@ export default function Home({ projects }: WelcomeProps) {
                 </nav>
 
                 {/* Hero Section */}
-                <section className="flex min-h-screen items-center justify-center px-6 pt-16">
-                    <div className="mx-auto max-w-3xl text-center">
-                        <h1 className="mb-6 text-5xl font-bold tracking-tight text-foreground sm:text-6xl lg:text-7xl">
+                <section className="flex items-center justify-center px-6 pt-16">
+                    <div className="pt-32 mx-auto max-w-3xl text-center">
+                        {/* <h1 className="mb-6 text-5xl font-bold tracking-tight text-foreground sm:text-6xl lg:text-7xl">
                             Araga Collective
-                        </h1>
-                        <p className="mb-8 text-xl leading-relaxed text-muted-foreground">
-                            We craft digital experiences through branding, creative direction,
-                            and modern web development.
-                        </p>
-                        <div className="flex justify-center gap-4">
+                        </h1> */}
+                        <p className="mb-8 text-3xl leading-relaxed text-muted-foreground">Solutions for the web, made-to-order</p>
+                        {/* <div className="flex justify-center gap-4">
                             <a
                                 href="#projects"
                                 className="inline-flex h-10 items-center justify-center rounded-md bg-foreground px-6 text-sm font-medium text-background shadow-xs transition-colors hover:opacity-90"
@@ -67,7 +64,7 @@ export default function Home({ projects }: WelcomeProps) {
                             >
                                 Get in Touch
                             </a>
-                        </div>
+                        </div> */}
                     </div>
                 </section>
 

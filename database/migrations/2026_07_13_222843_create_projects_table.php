@@ -14,7 +14,9 @@ return new class extends Migration
             $table->string('slug')->unique();
             $table->text('description');
             $table->string('thumbnail_path');
+            $table->json('pictures')->nullable();
             $table->string('url')->nullable();
+            $table->boolean('selected')->default(false);
             $table->unsignedInteger('sort_order')->default(0);
             $table->timestamps();
         });

@@ -25,9 +25,19 @@ class Project extends Model
         'slug',
         'description',
         'thumbnail_path',
+        'pictures',
         'url',
+        'selected',
         'sort_order',
     ];
+
+    protected function casts(): array
+    {
+        return [
+            'pictures' => 'array',
+            'selected' => 'boolean',
+        ];
+    }
 
     /** @return BelongsToMany<Tag, $this> */
     public function tags(): BelongsToMany
