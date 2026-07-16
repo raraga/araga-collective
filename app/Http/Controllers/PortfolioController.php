@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Project;
 use Inertia\Inertia;
 use Inertia\Response;
+use Illuminate\Http\Request;
 
 class PortfolioController extends Controller
 {
@@ -26,12 +27,12 @@ class PortfolioController extends Controller
         ]);
     }
 
-    public function show(Project $project): Response
+    public function show(Request $request): Response
     {
-        $project->load('tags');
+        $project = Project::with('tags')->where('slug', $request->project)->firstOrFail();
 
         return Inertia::render('project', [
-            'project' => $project,
+            'project' => $project
         ]);
     }
 }

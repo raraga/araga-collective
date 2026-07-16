@@ -14,6 +14,8 @@ createInertiaApp({
         switch (true) {
             case name === 'home':
                 return null;
+            case name === 'project':
+                return null;
             case name === 'projects':
                 return null;
             case name.startsWith('auth/'):
