@@ -16,7 +16,7 @@ test('the portfolio page renders the home inertia component', function () {
 
 test('the portfolio page displays projects', function () {
     $tag = Tag::factory()->create();
-    $project = Project::factory()->create();
+    $project = Project::factory()->create(['selected' => true]);
     $project->tags()->attach($tag);
 
     $response = $this->get(route('home'));
