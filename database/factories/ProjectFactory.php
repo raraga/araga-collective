@@ -19,7 +19,7 @@ class ProjectFactory extends Factory
             'title' => $title,
             'slug' => Str::slug($title),
             'description' => fake()->paragraph(),
-            'thumbnail_path' => fake()->imageUrl(800, 600, 'business'),
+            'thumbnail' => fake()->imageUrl(800, 600, 'business'),
             'url' => fake()->optional(0.7)->url(),
             'pictures' => array_map(fn () => fake()->imageUrl(1200, 800, 'business'), range(1, fake()->numberBetween(1, 5))),
             'selected' => fake()->boolean(),

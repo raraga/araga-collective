@@ -13,7 +13,7 @@ return new class extends Migration
             $table->string('title');
             $table->string('slug')->unique();
             $table->text('description');
-            $table->string('thumbnail_path');
+            $table->string('thumbnail');
             $table->json('pictures')->nullable();
             $table->string('url')->nullable();
             $table->boolean('selected')->default(false);

@@ -12,7 +12,7 @@ interface Project {
     title: string;
     slug: string;
     description: string;
-    thumbnail_path: string;
+    thumbnail: string;
     url: string | null;
     tags: Tag[];
 }

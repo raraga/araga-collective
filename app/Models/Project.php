@@ -24,7 +24,7 @@ class Project extends Model
         'title',
         'slug',
         'description',
-        'thumbnail_path',
+        'thumbnail',
         'pictures',
         'url',
         'selected',
@@ -37,6 +37,19 @@ class Project extends Model
             'pictures' => 'array',
             'selected' => 'boolean',
         ];
+    }
+
+    public function getThumbnailAttribute(?string $value): string
+    {
+        if (! $value) {
+            return '';
+        }
+
+        if (str_starts_with($value, 'http') || str_starts_with($value, '/')) {
+            return $value;
+        }
+
+        return '/storage/'.$value;
     }
 
     /** @return BelongsToMany<Tag, $this> */

@@ -18,7 +18,7 @@ class ProjectsTable
                     ->searchable(),
                 TextColumn::make('slug')
                     ->searchable(),
-                TextColumn::make('thumbnail_path')
+                TextColumn::make('thumbnail')
                     ->searchable(),
                 TextColumn::make('url')
                     ->searchable(),

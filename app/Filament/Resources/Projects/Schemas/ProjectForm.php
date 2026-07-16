@@ -3,6 +3,7 @@
 namespace App\Filament\Resources\Projects\Schemas;
 
 use Filament\Forms\Components\Checkbox;
+use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Repeater;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
@@ -20,13 +21,14 @@ class ProjectForm
                 Textarea::make('description')
                     ->required()
                     ->columnSpanFull(),
-                TextInput::make('thumbnail_path')
-                    ->required(),
+                FileUpload::make('thumbnail')
+                    ->image()
+                    ->disk('public')
+                    ->directory('thumbnails'),
                 Repeater::make('pictures')
                     ->schema([
                         TextInput::make('url')
-                            ->url()
-                            ->required(),
+                            ->url(),
                     ])
                     ->columnSpanFull(),
                 TextInput::make('url')

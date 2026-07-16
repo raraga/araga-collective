@@ -36,7 +36,7 @@ test('projects are loaded with their tags', function () {
         'title' => 'Test Project',
         'slug' => 'test-project',
         'description' => 'A test project.',
-        'thumbnail_path' => 'https://placehold.co/800x600',
+        'thumbnail' => 'https://placehold.co/800x600',
         'selected' => true,
         'sort_order' => 1,
     ]);
